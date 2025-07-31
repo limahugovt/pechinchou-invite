@@ -85,6 +85,7 @@ export const CentralContent = styled.div`
 
   @media (max-width: 600px) {
     position: absolute;
+    gap: 34px;
     top: 275px;
   }
 `;
