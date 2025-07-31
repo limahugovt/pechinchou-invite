@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import CustomHead from "../components/CustomHead";
 import backgroundImage from "../components/InviteWhatsappPage/background-image.jpg";
 import { generateRandomPhone } from "../components/InviteWhatsappPage/functions";
 import IconWhatsAppSimple from "../components/InviteWhatsappPage/IconWhatsAppSimple";
@@ -59,56 +60,64 @@ export default function WhatsAppPage() {
   }, [currentPhone, isInitialized]);
 
   return (
-    <PageContainer backgroundImage={backgroundImage.src}>
-      <HeaderContainer>
-        <HeaderTitle>RECEBA AS MELHORES PROMOÇÕES NO SEU WHATSAPP</HeaderTitle>
-      </HeaderContainer>
-      <MainContentArea>
-        <CentralContent>
-          <CardWithBackground>
-            <BackgroundProductsImage
-              src={Products.src}
-              alt="Produtos em promoção"
-              width={351}
-              height={351}
-            />
-            <GroupCard>
-              <CardContentWrapper>
-                <GroupLogo src={Logo.src} alt="Logo do grupo de promoções" />
-                <GroupName>Promoções Gerais</GroupName>
-                <JoinGroupButton href={"/whatsapp/entrar"} target="_blank">
-                  <Image
-                    src={IconWhatsAppSimple({})}
-                    alt="Ícone do WhatsApp"
-                    width={17}
-                    height={17}
-                  />
-                  <p>Entrar Agora</p>
-                </JoinGroupButton>
-              </CardContentWrapper>
-            </GroupCard>
-          </CardWithBackground>
-          <GroupInfoSection>
-            <AnimatedVacancies key={remainingSlots} isAnimating={isAnimating}>
-              <span
-                style={{ display: "inline-block" }}
-                className="animated-number"
-              >
-                {remainingSlots}
-              </span>{" "}
-              Vagas Restantes
-            </AnimatedVacancies>
-            <AnimatedPhone key={currentPhone} isAnimating={isAnimating}>
-              {currentPhone
-                ? `${currentPhone} entrou no grupo`
-                : "Carregando..."}
-            </AnimatedPhone>
-          </GroupInfoSection>
-        </CentralContent>
-        <CopyrightText>
-          ©️ Ajudando pessoas a economizarem desde 2014
-        </CopyrightText>
-      </MainContentArea>
-    </PageContainer>
+    <>
+      <CustomHead />
+      <PageContainer backgroundImage={backgroundImage.src}>
+        <HeaderContainer>
+          <HeaderTitle>
+            RECEBA AS MELHORES PROMOÇÕES NO SEU WHATSAPP
+          </HeaderTitle>
+        </HeaderContainer>
+        <MainContentArea>
+          <CentralContent>
+            <CardWithBackground>
+              <BackgroundProductsImage
+                src={Products.src}
+                alt="Produtos em promoção"
+                width={351}
+                height={351}
+              />
+              <GroupCard>
+                <CardContentWrapper>
+                  <GroupLogo src={Logo.src} alt="Logo do grupo de promoções" />
+                  <GroupName>Promoções Gerais</GroupName>
+                  <JoinGroupButton
+                    href={"https://pechinchou.com.br/whatsapp/entrar"}
+                    target="_blank"
+                  >
+                    <Image
+                      src={IconWhatsAppSimple({})}
+                      alt="Ícone do WhatsApp"
+                      width={17}
+                      height={17}
+                    />
+                    <p>Entrar Agora</p>
+                  </JoinGroupButton>
+                </CardContentWrapper>
+              </GroupCard>
+            </CardWithBackground>
+            <GroupInfoSection>
+              <AnimatedVacancies key={remainingSlots} isAnimating={isAnimating}>
+                <span
+                  style={{ display: "inline-block" }}
+                  className="animated-number"
+                >
+                  {remainingSlots}
+                </span>{" "}
+                Vagas Restantes
+              </AnimatedVacancies>
+              <AnimatedPhone key={currentPhone} isAnimating={isAnimating}>
+                {currentPhone
+                  ? `${currentPhone} entrou no grupo`
+                  : "Carregando..."}
+              </AnimatedPhone>
+            </GroupInfoSection>
+          </CentralContent>
+          <CopyrightText>
+            ©️ Ajudando pessoas a economizarem desde 2014
+          </CopyrightText>
+        </MainContentArea>
+      </PageContainer>
+    </>
   );
 }
