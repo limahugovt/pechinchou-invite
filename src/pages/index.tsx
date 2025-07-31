@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import backgroundImage from "./InviteWhatsappPage/background-image.jpg";
-import { generateRandomPhone } from "./InviteWhatsappPage/functions";
-import IconWhatsAppSimple from "./InviteWhatsappPage/IconWhatsAppSimple";
-import Logo from "./InviteWhatsappPage/logo.jpg";
-import Products from "./InviteWhatsappPage/products.png";
+import backgroundImage from "../components/InviteWhatsappPage/background-image.jpg";
+import { generateRandomPhone } from "../components/InviteWhatsappPage/functions";
+import IconWhatsAppSimple from "../components/InviteWhatsappPage/IconWhatsAppSimple";
+import Logo from "../components/InviteWhatsappPage/logo.jpg";
+import Products from "../components/InviteWhatsappPage/products.png";
 import {
   AnimatedPhone,
   AnimatedVacancies,
@@ -22,7 +22,7 @@ import {
   JoinGroupButton,
   MainContentArea,
   PageContainer,
-} from "./InviteWhatsappPage/styles";
+} from "../components/InviteWhatsappPage/styles";
 
 export default function WhatsAppPage() {
   const [remainingSlots, setRemainingSlots] = useState(50);
