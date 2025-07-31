@@ -66,6 +66,14 @@ export const HeaderTitle = styled.p`
   @media (max-width: 600px) {
     font-size: 14px;
   }
+
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 10px;
+  }
 `;
 
 export const MainContentArea = styled.div`
@@ -103,6 +111,11 @@ export const BackgroundProductsImage = styled.img`
   @media (max-width: 600px) {
     bottom: 146px;
   }
+
+  @media (max-width: 375px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 export const GroupCard = styled.div`
@@ -115,6 +128,11 @@ export const GroupCard = styled.div`
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1;
+
+  @media (max-width: 375px) {
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
 export const CardContentWrapper = styled.div`
@@ -124,6 +142,10 @@ export const CardContentWrapper = styled.div`
   gap: 24px;
   align-items: center;
   text-align: center;
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `;
 
 export const GroupLogo = styled.img`

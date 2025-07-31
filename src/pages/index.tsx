@@ -78,8 +78,6 @@ export default function WhatsAppPage() {
               <BackgroundProductsImage
                 src={Products.src}
                 alt="Produtos em promoção"
-                width={351}
-                height={351}
               />
               <GroupCard>
                 <CardContentWrapper>
