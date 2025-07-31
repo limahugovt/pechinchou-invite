@@ -82,6 +82,11 @@ export const CentralContent = styled.div`
   flex-direction: column;
   gap: 62px;
   align-items: center;
+
+  @media (max-width: 600px) {
+    position: absolute;
+    top: 275px;
+  }
 `;
 
 export const CardWithBackground = styled.div`
