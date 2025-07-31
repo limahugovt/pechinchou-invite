@@ -39,6 +39,10 @@ export default function WhatsAppPage() {
       return;
     }
 
+    if (remainingSlots <= 1) {
+      return;
+    }
+
     const randomDelay = Math.floor(Math.random() * 2000) + 1000;
 
     const timeout = setTimeout(() => {
@@ -57,7 +61,7 @@ export default function WhatsAppPage() {
     }, randomDelay);
 
     return () => clearTimeout(timeout);
-  }, [currentPhone, isInitialized]);
+  }, [currentPhone, isInitialized, remainingSlots]);
 
   return (
     <>
@@ -80,7 +84,7 @@ export default function WhatsAppPage() {
               <GroupCard>
                 <CardContentWrapper>
                   <GroupLogo src={Logo.src} alt="Logo do grupo de promoções" />
-                  <GroupName>Promoções Gerais</GroupName>
+                  <GroupName>Pechinchou Promoções</GroupName>
                   <JoinGroupButton
                     href={"https://pechinchou.com.br/whatsapp/entrar"}
                     target="_blank"

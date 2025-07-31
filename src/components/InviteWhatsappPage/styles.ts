@@ -44,7 +44,7 @@ export const PageContainer = styled.div<{ backgroundImage: string }>`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #1b1d1f;
+  background-color: rgb(0, 0, 0, 0.95);
   background-blend-mode: multiply;
   position: relative;
 `;
@@ -228,6 +228,6 @@ export const CopyrightText = styled.div`
   bottom: 134px;
 
   @media (max-width: 600px) {
-    bottom: 54px;
+    bottom: 3%;
   }
 `;
